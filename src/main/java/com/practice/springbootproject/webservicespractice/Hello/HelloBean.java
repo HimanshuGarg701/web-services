@@ -1,4 +1,4 @@
-package com.practice.springbootproject.webservicespractice;
+package com.practice.springbootproject.webservicespractice.Hello;
 
 public class HelloBean {
 

@@ -1,5 +1,6 @@
-package com.practice.springbootproject.webservicespractice;
+package com.practice.springbootproject.webservicespractice.Hello;
 
+import com.practice.springbootproject.webservicespractice.Hello.HelloBean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;

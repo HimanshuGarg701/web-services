@@ -11,6 +11,10 @@ public class User {
         this.country = country;
     }
 
+    public User(){
+        //Default Constructor
+    }
+
     public String getName() {
         return name;
     }

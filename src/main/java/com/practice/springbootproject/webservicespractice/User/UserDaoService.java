@@ -16,7 +16,7 @@ public class UserDaoService {
     }
 
     public void addUser(User user){
-        if(user.getId()!=null) {
+        if(user.getId()==null) {
             user.setId(userCount);
             userCount++;
         }

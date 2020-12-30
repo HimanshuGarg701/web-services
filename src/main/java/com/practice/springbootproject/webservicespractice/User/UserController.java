@@ -1,9 +1,7 @@
 package com.practice.springbootproject.webservicespractice.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,5 +19,10 @@ public class UserController {
     @GetMapping(path="/users/{id}")
     public User getUser(@PathVariable int id){
         return userDao.getUser(id);
+    }
+
+    @PostMapping(path="/users")
+    public void addUser(@RequestBody User user){
+        userDao.addUser(user);
     }
 }

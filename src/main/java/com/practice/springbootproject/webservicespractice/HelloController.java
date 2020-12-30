@@ -10,4 +10,9 @@ public class HelloController {
     public String sayHello(){
         return "Hello There!!";
     }
+
+    @GetMapping(path="hello-bean")
+    public HelloBean sayHelloBean(){
+        return new HelloBean("Hello Bean");
+    }
 }

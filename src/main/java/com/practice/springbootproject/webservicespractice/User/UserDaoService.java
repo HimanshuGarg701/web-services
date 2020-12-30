@@ -15,12 +15,13 @@ public class UserDaoService {
         users.add(new User(3, "Finch", "Australia"));
     }
 
-    public void addUser(User user){
+    public User addUser(User user){
         if(user.getId()==null) {
             user.setId(userCount);
             userCount++;
         }
         users.add(user);
+        return user;
     }
 
     public User getUser(Integer id){

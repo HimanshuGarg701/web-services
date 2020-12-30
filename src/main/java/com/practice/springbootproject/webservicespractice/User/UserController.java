@@ -28,6 +28,15 @@ public class UserController {
         return user;
     }
 
+    @DeleteMapping(path="/users/{id}")
+    public User deleteUser(@PathVariable int id){
+        User user = userDao.deleteUser(id);
+        if(user==null){
+            throw new UserNotFoundException("User with id: " + id + " not found");
+        }
+        return user;
+    }
+
     @PostMapping(path="/users")
     public ResponseEntity<Object> addUser(@RequestBody User user){
         User createdUser = userDao.addUser(user);
